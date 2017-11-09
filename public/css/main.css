@@ -1,0 +1,30 @@
+body {
+    background-image: url(../img/background.jpg);
+    background-size:cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+/** containers **/
+.wrapper {
+    margin-top: 100px;
+    margin-botom: 200px;
+}
+@media (max-width: 767px) {
+    .wrapper {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+}
+.container {
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/** colors **/
+.bg-yellow {
+    background-color: #D9B64E!important;
+}
+.bg-dark-70 {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
