@@ -86,10 +86,11 @@ class MovieController extends Controller
             {
                 if($role->actor == $actor)
                 {
-                    if(!array_key_exists($movie->name, $roles)){
+                    if(!array_key_exists($movie->name, $roles))
                         $roles[$movie->name] = array();
-                    }
-                    array_push($roles[$movie->name], $role->name);
+
+                    if(!in_array($role->name, $roles[$movie->name]))
+                        array_push($roles[$movie->name], $role->name);
                 }
             }
         }
