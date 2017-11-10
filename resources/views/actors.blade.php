@@ -13,13 +13,15 @@
                         <th>Roles</th>
                     </thead>
                     <tbody>
-                    @foreach($actorsRoles as $actor=>$roles)
+                    @foreach($actorsRoles as $actor=>$allroles)
                         @if($actor)
                             <tr>
                                 <td>{{$actor}}</td>
                                 <td>
-                                    @foreach($roles as $role)
-                                        <p>{{$role}}</p>
+                                    @foreach($allroles as $rolesInSingleMovie)
+                                        @foreach($rolesInSingleMovie as $role)
+                                            <p>{{$role}}</p>
+                                        @endforeach
                                     @endforeach
                                 </td>
                             </tr>
